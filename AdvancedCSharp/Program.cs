@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Net.NetworkInformation;
 
 namespace AdvancedCSharp
@@ -9,8 +11,23 @@ namespace AdvancedCSharp
 
         static void Main(string[] args)
         {
+          
 
             int[] arr= { 1, 2, 3, 4, 5 };
+            A[] arrofA = new A[] { new A(), new A(), new A() };
+            List<A> listOfA = new List<A>
+            {
+                new A(),
+                new A(),
+                new A()
+            };
+            Dictionary<int, A> dictionaryOfA = new Dictionary<int, A>
+            {
+                [1] = new A(),
+                [2] = new A(),
+                [3] = new A()
+            };
+            /*dictionary needs a type and __. pass the key into the instance?*/
             var aType = 123.45;
             Console.WriteLine($"THe type of aType is {aType.GetType()}");
             var aTypeOf = typeof(System.String);
